@@ -41,7 +41,7 @@ const theme = createMuiTheme({
             fontFamily: ['Goldman', 'Roboto'].join(','),
             fontWeight: 700,
             letterSpacing: '0.05em',
-            fontSize: '0.7rem',
+            fontSize: '0.6rem',
             textTransform: 'uppercase',
             '@media (min-width:600px)': {
                 fontSize: '0.8rem',
