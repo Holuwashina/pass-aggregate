@@ -13,10 +13,11 @@ const Home = ({ platforms } ) => {
 }
 
 //http://json-db-passa.herokuapp.com/platforms
+//http://localhost:4000/platforms
 
 export const getStaticProps = async () => {
   //Fetch the platform 
-  const platform_res = await fetch('http://localhost:4000/platforms')
+  const platform_res = await fetch('http://json-db-passa.herokuapp.com/platforms')
   const platforms = await platform_res.json()
 
   if (!platforms) {

@@ -53,12 +53,13 @@ const Slug = ({ school }) => {
 
 export default Slug;
 
-//http://json-db-passa.herokuapp.com/platforms
+//http://json-db-passa.herokuapp.com/schools
+//http://localhost:4000/schools
 
 export const getStaticProps = async ({ params }) => {
   const slug = params.slug;
   //Fetch the platform
-  const school_res = await fetch(`http://localhost:4000/schools/?slug=${slug}`);
+  const school_res = await fetch(`http://json-db-passa.herokuapp.com/schools/?slug=${slug}`);
   const found = await school_res.json();
 
   //Return the platform as props
