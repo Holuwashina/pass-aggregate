@@ -71,7 +71,7 @@ export const getStaticProps = async ({ params }) => {
 };
 
 export const getStaticPaths = async () => {
-  const platform_res = await fetch('http://localhost:4000/schools/');
+  const platform_res = await fetch('http://json-db-passa.herokuapp.com/schools');
   const schools = await platform_res.json();
 
   //Return the platform as props
