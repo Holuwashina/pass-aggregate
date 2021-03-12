@@ -1,53 +1,58 @@
 import { makeStyles } from '@material-ui/core/styles';
 import { Grid, Typography, Container, Paper } from '@material-ui/core';
+import Services from './services';
 
 const Slug = ({ school }) => {
   const slug = useStyles();
   return (
-    <div className={slug.root}>
-      <div className={slug.overlay}>
-        <Container className={slug.container} maxWidth='sm'>
-          <Typography color='textPrimary' variant='h1'>
-            {school.id}
-          </Typography>
-          <Typography gutterBottom color='textSecondary' variant='h3'>
-            {school.name}
-          </Typography>
-          <Typography gutterBottom color='textSecondary' variant='h2'>
-            {school.info}
-          </Typography>
-          <Typography gutterBottom color='textSecondary' variant='h2'>
-            GET ACCESS TO
-          </Typography>
+    <>
+      <div className={slug.root}>
+        <div className={slug.overlay}>
+          <Container className={slug.container} maxWidth='sm'>
+            <Typography color='textPrimary' variant='h1'>
+              {school.id}
+            </Typography>
+            <Typography gutterBottom color='textSecondary' variant='h3'>
+              {school.name}
+            </Typography>
+            <Typography gutterBottom color='textSecondary' variant='h2'>
+              {school.info}
+            </Typography>
+            <Typography gutterBottom color='textSecondary' variant='h2'>
+              GET ACCESS TO
+            </Typography>
 
-          <Grid container spacing={3} justify='center'>
-            <Grid item>
-              <Paper elevation={5} className={slug.paper}>
-                <Typography color='primary' variant='h3'>
-                  DEPARTMENTS' NOTES
-                </Typography>
-              </Paper>
-            </Grid>
+            <Grid container spacing={3} justify='center'>
+              <Grid item>
+                <Paper elevation={5} className={slug.paper}>
+                  <Typography color='primary' variant='h3'>
+                    DEPARTMENTS' NOTES
+                  </Typography>
+                </Paper>
+              </Grid>
 
-            <Grid item>
-              <Paper elevation={5} className={slug.paper}>
-                <Typography color='primary' variant='h3'>
-                  REAL-TIME QUESTIONS
-                </Typography>
-              </Paper>
-            </Grid>
+              <Grid item>
+                <Paper elevation={5} className={slug.paper}>
+                  <Typography color='primary' variant='h3'>
+                    REAL-TIME QUESTIONS
+                  </Typography>
+                </Paper>
+              </Grid>
 
-            <Grid item>
-              <Paper elevation={5} className={slug.paper}>
-                <Typography color='primary' variant='h3'>
-                  MEET NEW STUDENTS
-                </Typography>
-              </Paper>
+              <Grid item>
+                <Paper elevation={5} className={slug.paper}>
+                  <Typography color='primary' variant='h3'>
+                    MEET NEW STUDENTS
+                  </Typography>
+                </Paper>
+              </Grid>
             </Grid>
-          </Grid>
-        </Container>
+          </Container>
+        </div>
       </div>
-    </div>
+
+      <Services/>
+    </>
   );
 };
 
@@ -85,7 +90,6 @@ export const getStaticPaths = async () => {
 
 const useStyles = makeStyles(() => ({
   root: {
-    marginBottom: 32,
     backgroundImage: `url('/images/slugbg.jpg')`,
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',

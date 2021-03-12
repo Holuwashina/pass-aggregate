@@ -19,19 +19,23 @@ const Footer = () => {
           <Grid item>
             <Button variant='text'>Terms & Conditions</Button>
           </Grid>
-          <Typography gutterBottom variant='body2' style={{margin: '12px 0'}}>
+          <Typography
+            gutterBottom
+            color='primary'
+            style={{ fontSize: '0.7rem', margin: '12px 0' }}
+          >
             Copyright &#xa9; {year} Passaggregate Inc.
           </Typography>
         </Grid>
       </Container>
     </div>
   );
-}
+};
 
 const useStyles = makeStyles(() => ({
   root: {
     paddingTop: 5,
-    borderTop: 'outset'
+    borderTop: 'outset',
   },
 }));
 

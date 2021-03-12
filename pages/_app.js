@@ -31,6 +31,16 @@ function App({ Component, pageProps }) {
           <CssBaseline />
           <Header />
           <Component {...pageProps} />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
           <Footer />
         </IconContext.Provider>
       </ThemeProvider>

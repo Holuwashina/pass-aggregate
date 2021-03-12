@@ -60,12 +60,24 @@ const theme = createMuiTheme({
         body2: {
             fontWeight: 600,
             letterSpacing: '0.05em',
-            fontSize: '0.7rem',
+            fontSize: '0.4rem',
         },
     },
 
     // Overriding components settings
     overrides: {
+        MuiAlert: {
+            root: {
+                fontSize: '0.68rem'
+            }
+        },
+
+        MuiPaper: {
+            root: {
+                color: '#5f0937'
+            }
+        },
+
         MuiTypography: {
             gutterBottom: {
                 marginBottom: '1em',
@@ -80,7 +92,7 @@ const theme = createMuiTheme({
 
         MuiSvgIcon: {
             root: {
-                fontSize: '1.1rem',
+                fontSize: '1rem !important',
             },
         },
 
@@ -141,7 +153,7 @@ const theme = createMuiTheme({
 
         MuiFormLabel: {
             root: {
-                color: 'red',
+                color: '#e65100',
                 fontSize: '0.8rem',
                 fontWeight: 600,
                 '@media (min-width:600px)': {
@@ -169,7 +181,7 @@ const theme = createMuiTheme({
         MuiInputBase: {
             input: {
                 textTransform: 'uppercase',
-                color: 'red',
+                color: '#e65100',
                 fontSize: '0.6rem',
                 fontWeight: 600,
                 '@media (min-width:600px)': {
@@ -196,8 +208,8 @@ export default theme;
 
 // React-icons styling
 export const themeIcon = {
-    size: '2em',
-    color: 'green',
+    size: '3.5em',
+    color: 'inherit',
     style: {
         marginBottom: 10,
     }
