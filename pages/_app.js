@@ -39,9 +39,7 @@ function App({ Component, pageProps }) {
           <br />
           <br />
           <br />
-          <br />
-          <br />
-          <Footer />
+          {/* <Footer /> */}
         </IconContext.Provider>
       </ThemeProvider>
     </>
